@@ -1,0 +1,8 @@
+25.12.2020 12:03:16 Alice->Mail : "Alice", Base64[Ticket], Base64[K_A(N_1)]
+25.12.2020 12:03:21 "Ticket Decrpyted" : "Alice", "Mail", [TS2], Base64[K_A]  
+25.12.2020 12:03:21 "Message Decrpyted" : N1=[N1]
+25.12.2020 12:03:22 Mail->Alice : [N1+1], [N2] 
+25.12.2020 12:03:22 Mail->Alice : Base64[K_A(N1+1, N2)]
+25.12.2020 12:03:25 Alice->Mail : Base64[K_A(N2+1)] 
+25.12.2020 12:03:25 "Message Decrpyted" : [N2+1]
+25.12.2020 12:03:25 Mail->Alice : "Authentication is completed!"

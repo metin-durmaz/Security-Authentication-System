@@ -1,0 +1,15 @@
+25.12.2020 12:02:00 Alice->KDC : "Alice", [Pass], "Mail", [TS1]
+25.12.2020 12:02:00 Alice->KDC : "Alice", Base64[P_KDC("Alice", Pass, "Mail", TS1)] 
+25.12.2020 12:02:05 KDC->Alice : "Password Denied" 
+25.12.2020 12:02:30 Alice->KDC : "Alice", [Pass], "Mail", [TS1]
+25.12.2020 12:02:30 Alice->KDC : "Alice", Base64[P_KDC("Alice", Pass, "Mail", TS1)] 
+25.12.2020 12:03:00 KDC->Alice : "Password Verified" 
+25.12.2020 12:03:00 KDC->Alice : Base64[P_A(K_A, "Mail", TS2)], Base64[Ticket]
+25.12.2020 12:03:05 Message Decrypted : Base64[K_A], "Mail", [TS2]
+25.12.2020 12:03:15 Alice->Mail : "Alice", [N_1] 
+25.12.2020 12:03:15 Alice->Mail : "Alice", Base64[Ticket], Base64[K_A(N_1)] 
+25.12.2020 12:03:23 Mail->Alice : Base64[K_A(N1+1, N2)] 
+25.12.2020 12:03:23 Message Decrpyted : N1 is OK, N2=[N2]
+25.12.2020 12:03:24 Alice->Mail : [N2+1]
+25.12.2020 12:03:24 Alice->Mail : Base64[K_A(N2+1)] 
+25.12.2020 12:03:26 Mail->Alice : "Authentication is completed!"
