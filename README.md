@@ -16,7 +16,7 @@ MailServer Terminal
     
 WebServer Terminal
 
-    -- java MailServer
+    -- java WebServer
     
 DatabaseServer Terminal
 
